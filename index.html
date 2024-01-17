@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #products-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            margin: 20px;
+            text-align: center;
+        }
+    </style>
+    <title>Simple E-Commerce</title>
+</head>
+<body>
+    <h1>Welcome to our Lunch Delivery Service!</h1>
+    
+    <!-- <div id="products-container">
+        <div class="product cheeseburger">
+            <img class="product-image" src="./static/images/cheeseburger.jpg" alt="Cheese Burger Image">
+            <h3>Cheese Burger</h3>
+            <p>Price: $3000</p>
+        </div>
+
+        <div class="product ramen">
+            <img class="product-image" src="./static/images/ramen.jpg" alt="Ramen Image">
+            <h3>Ramen</h3>
+            <p>Price: $4000</p>
+        </div>
+
+        <div class="product tacos">
+            <img class="product-image" src="./static/images/tacos.jpg" alt="Tacos Image">
+            <h3>Tacos</h3>
+            <p>Price: $5000</p>
+        </div>
+    </div> -->
+
+    <div id="products-container"></div>
+
+    <div id="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items">
+            <!-- Cart items will be dynamically added here using JavaScript -->
+        </ul>
+        <p>Total: $<span id="total">0.00</span></p>
+        <button onclick="checkout()">Checkout</button>
+    </div>
+
+    <script src="./static/script.js"></script>
+</body>
+</html>
