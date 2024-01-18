@@ -3,6 +3,9 @@ const products = [
     { id: 1, name: 'Cheese Burger', price: 200.00 , imageUrl: '/static/images/cheeseburger.jpg'},
     { id: 2, name: 'Ramen', price: 300.00, imageUrl: '/static/images/ramen.jpg'},
     { id: 3, name: 'Tacos', price: 500.00, imageUrl: '/static/images/tacos.jpg'},
+    { id: 4, name: 'Pizza', price: 800.00, imageUrl: '/static/images/pizza.jpg'},
+    { id: 4, name: 'Fries', price: 100.00, imageUrl: '/static/images/fries.jpg'},
+    { id: 4, name: 'Coke', price: 60.00, imageUrl: '/static/images/coke.jpg'}
 ];
 
 // Sample cart data
