@@ -65,7 +65,7 @@ function updateCart() {
 // }
 
 function redirectToCheckout() {
-    window.location.href = 'checkout.html';
+    window.location.href = '/templates/checkout.html';
 }
 // document.getElementById("checkoutButton").onclick = function () {
 //     location.href = "/templates/checkout.html";
