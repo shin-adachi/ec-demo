@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Your existing styles here */
+
+        /* Additional styles for checkout confirmation */
+        #confirmation {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+    </style>
+    <title>Checkout - Restaurant Shin's</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Checkout</h1>
+    </header>
+
+    <div id="checkout-form">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <button onclick="confirmCheckout()">Confirm Checkout</button>
+    </div>
+
+    <script src="./static/checkout.js"></script>
+
+    <script type="text/javascript">
+        !function(q,g,r,a,p,h,js) {
+          q.appier=q.qg;
+          if(q.qg)return;
+          js=q.appier=q.qg=function() {
+            js.callmethod ? js.callmethod.call(js, arguments) : js.queue.push(arguments);
+          };
+          js.queue=[];
+          p=g.createElement(r);p.async=!0;p.src=a;h=g.getElementsByTagName(r)[0];
+          h.parentNode.insertBefore(p,h);
+        } (window,document,'script','https://cdn.qgr.ph/qgraph.eae72b3ae1062f929ac3.js');
+    </script>
+
+</body>
+</html>

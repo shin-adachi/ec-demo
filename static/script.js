@@ -4,8 +4,8 @@ const products = [
     { id: 2, name: 'Ramen', price: 300.00, imageUrl: '/static/images/ramen.jpg'},
     { id: 3, name: 'Tacos', price: 500.00, imageUrl: '/static/images/tacos.jpg'},
     { id: 4, name: 'Pizza', price: 800.00, imageUrl: '/static/images/pizza.jpg'},
-    { id: 4, name: 'Fries', price: 100.00, imageUrl: '/static/images/fries.jpg'},
-    { id: 4, name: 'Coke', price: 60.00, imageUrl: '/static/images/coke.jpg'}
+    { id: 5, name: 'Fries', price: 100.00, imageUrl: '/static/images/fries.jpg'},
+    { id: 6, name: 'Coke', price: 60.00, imageUrl: '/static/images/coke.jpg'}
 ];
 
 // Sample cart data
@@ -58,11 +58,18 @@ function updateCart() {
 }
 
 // Function to simulate checkout (clears the cart)
-function checkout() {
-    alert('Thank you for your purchase!');
-    cart = [];
-    updateCart();
+// function checkout() {
+//     alert('Thank you for your purchase!');
+//     cart = [];
+//     updateCart();
+// }
+
+function redirectToCheckout() {
+    window.location.href = 'checkout.html';
 }
+// document.getElementById("checkoutButton").onclick = function () {
+//     location.href = "/templates/checkout.html";
+// };
 
 // Call the displayProducts function on page load
 window.onload = function() {
