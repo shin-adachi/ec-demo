@@ -23,7 +23,7 @@ function displayProducts() {
             <img src="${product.imageUrl}" alt="${product.name}" onclick="addToCart(${product.id})">
             <p>${product.name}</p>
             <p>$${product.price.toFixed(2)}</p>
-            <button onclick="addToCart(${product.id, product.name, product.price})">Add to Cart</button>
+            <button onclick="addToCart(${product.id}, ${product.name}, ${product.price.toFixed(2)})">Add to Cart</button>
         `;
         productsContainer.appendChild(productDiv);
     });
