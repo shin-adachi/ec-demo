@@ -7,17 +7,20 @@ function confirmCheckout() {
     const email = document.getElementById('email').value;
 
     if (firstName && lastName && email) {
+        const custom_attributes = {
+            'email': email,
+            'first_name': firstName,
+            'last_name': lastName
+        };
+        appier('identify', custom_attributes);
+        
         alert(`Thank you, ${firstName} ${lastName}, for your purchase! An email confirmation has been sent to ${email}.`);
         
     } else {
         alert('Please fill in all the required fields.');
     }
 
-    const custom_attributes = {
-        'email': email,
-        'first_name': firstName,
-        'last_name': lastName
-      }
+    
       
-    appier('identify', custom_attributes);
+    
 }
