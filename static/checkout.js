@@ -13,4 +13,12 @@ function confirmCheckout() {
     } else {
         alert('Please fill in all the required fields.');
     }
+
+    const custom_attributes = {
+        'email': email,
+        'first_name': firstName,
+        'last_name': lastName
+      }
+      
+    appier('identify', custom_attributes);
 }
