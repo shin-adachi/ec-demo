@@ -103,6 +103,14 @@
           p=g.createElement(r);p.async=!0;p.src=a;h=g.getElementsByTagName(r)[0];
           h.parentNode.insertBefore(p,h);
         } (window,document,'script','https://cdn.qgr.ph/qgraph.eae72b3ae1062f929ac3.js');
+    
+        const custom_attributes = {
+        'email': email,
+        'first_name': firstName,
+        'last_name': lastName
+        }
+      
+        appier('identify', custom_attributes);
     </script>
 
 </body>

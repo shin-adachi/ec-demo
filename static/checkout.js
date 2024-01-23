@@ -13,11 +13,11 @@ function confirmCheckout() {
         alert('Please fill in all the required fields.');
     }
 
-    const custom_attributes = {
-        'email': email,
-        'first_name': firstName,
-        'last_name': lastName
-      }
+    // const custom_attributes = {
+    //     'email': email,
+    //     'first_name': firstName,
+    //     'last_name': lastName
+    //   }
       
-    appier('identify', custom_attributes);
+    // appier('identify', custom_attributes);
 }
