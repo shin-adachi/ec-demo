@@ -23,7 +23,7 @@ function displayProducts() {
             <img src="${product.imageUrl}" alt="${product.name}" onclick="addToCart(${product.id})">
             <p>${product.name}</p>
             <p>$${product.price.toFixed(2)}</p>
-            <button onclick="addToCart(${product.id})">Add to Cart</button>
+            <button onclick="addToCart(${product.id, product.name, product.price})">Add to Cart</button>
         `;
         productsContainer.appendChild(productDiv);
     });
@@ -31,10 +31,11 @@ function displayProducts() {
 
 
 // Function to add a product to the cart
-function addToCart(productId) {
+function addToCart(productId, productName, productPrice) {
     const product = products.find(p => p.id === productId);
     cart.push(product);
     updateCart();
+    appier('event', 'product_added_to_cart', {'product_id': productId,'product_name': productName, 'product_price': productPrice});
 }
 
 // Function to update the cart display
@@ -57,21 +58,11 @@ function updateCart() {
     totalElement.textContent = total.toFixed(2);
 }
 
-// Function to simulate checkout (clears the cart)
-// function checkout() {
-//     alert('Thank you for your purchase!');
-//     cart = [];
-//     updateCart();
-// }
 
 function redirectToCheckout() {
     window.location.href = '/templates/checkout.html';
 }
-// document.getElementById("checkoutButton").onclick = function () {
-//     location.href = "/templates/checkout.html";
-// };
 
-// Call the displayProducts function on page load
 window.onload = function() {
     displayProducts();
 };
