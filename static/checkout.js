@@ -8,8 +8,7 @@ function confirmCheckout() {
 
     if (firstName && lastName && email) {
         alert(`Thank you, ${firstName} ${lastName}, for your purchase! An email confirmation has been sent to ${email}.`);
-        cart = [];
-        updateCart();
+        
     } else {
         alert('Please fill in all the required fields.');
     }
