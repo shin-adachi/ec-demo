@@ -23,7 +23,7 @@ function displayProducts() {
             <img src="${product.imageUrl}" alt="${product.name}" onclick="addToCart(${product.id})">
             <p>${product.name}</p>
             <p>$${product.price.toFixed(2)}</p>
-            <button onclick="addToCart(${product.id}, ${product.name}, ${product.price.toFixed(2)})">Add to Cart</button>
+            <button onclick="addToCart(${product.id})">Add to Cart</button>
         `;
         productsContainer.appendChild(productDiv);
     });
@@ -31,12 +31,14 @@ function displayProducts() {
 
 
 // Function to add a product to the cart
-function addToCart(productId, productName, productPrice) {
+function addToCart(productId) {
     const product = products.find(p => p.id === productId);
     cart.push(product);
     updateCart();
-    appier('event', 'product_added_to_cart', {'product_id': productId,'product_name': productName, 'product_price': productPrice});
+    appier('event', 'product_added_to_cart', {'product_id': productId, 'product_name': product.name, 'product_price': product.price.toFixed(2)});
 }
+
+
 
 // Function to update the cart display
 function updateCart() {
