@@ -15,7 +15,7 @@ function confirmCheckout() {
         appier('identify', custom_attributes);
         
         alert(`Thank you, ${firstName} ${lastName}, for your purchase! An email confirmation has been sent to ${email}.`);
-        
+        console.log(custom_attributes);
     } else {
         alert('Please fill in all the required fields.');
     }
