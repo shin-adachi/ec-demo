@@ -5,12 +5,14 @@ function confirmCheckout() {
     const firstName = document.getElementById('firstName').value;
     const lastName = document.getElementById('lastName').value;
     const email = document.getElementById('email').value;
+    const birthday = document.getElementById('birthday').value;
 
-    if (firstName && lastName && email) {
+    if (firstName && lastName && email && birthday) {
         const custom_attributes = {
             'email': email,
             'first_name': firstName,
-            'last_name': lastName
+            'last_name': lastName,
+            'birthday': birthday
         };
         appier('identify', custom_attributes);
         
